@@ -1,5 +1,6 @@
 # Escreva uma função chamada somamatriz que recebe uma matriz e soma todos os elementos da matriz.
 
+
 def somamatriz(matriz):
     soma = 0
     for linha in matriz:
