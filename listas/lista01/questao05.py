@@ -8,6 +8,6 @@ def fibonacci(numero):
     fib_sequence.append(next_num)
   return fib_sequence
 
-print(fibonacci(5))    
+print(f"A sequência é: {fibonacci(5)}")    
 
     
