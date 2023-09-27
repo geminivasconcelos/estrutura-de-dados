@@ -23,3 +23,19 @@ class Lista:
   
   def limparLista(self):
     self.tamanho = 0
+
+def main():
+  numero = 2
+  lista = Lista(numero)
+  lista.inserir(5)
+  lista.inserir(15)
+  lista.inserir(20)
+  lista.inserir(25)
+  lista.imprimir()
+  # lista.limpar()
+  # lista.imprimir()
+  # lista.inserir(50)
+  # lista.imprimir()
+
+if __name__ == "__main__":
+  main()
