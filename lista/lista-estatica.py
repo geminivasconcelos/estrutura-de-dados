@@ -13,6 +13,16 @@ class Lista:
       self.tamanho += 1
     else:
       print(f"Lista está cheia")
+      
+  def buscaValorLista(self, numero):
+    numeroEncontrado = False
+    for i in range(self.tamanho):
+      if(self.elemento[i] == numero):
+        print(f"Numero encontrado")
+        numeroEncontrado = True
+        break
+    if(numeroEncontrado == False):
+      print(f"Esse numero não está na lista")
 
   def imprimirLista(self):
     if(self.tamanho == 0):
@@ -25,13 +35,14 @@ class Lista:
     self.tamanho = 0
 
 def main():
-  numero = 2
+  numero = int(sys.argv[1])
   lista = Lista(numero)
   lista.inserir(5)
   lista.inserir(15)
   lista.inserir(20)
   lista.inserir(25)
-  lista.imprimir()
+  lista.buscaValorLista(150)
+  lista.imprimirLista()
   # lista.limpar()
   # lista.imprimir()
   # lista.inserir(50)
