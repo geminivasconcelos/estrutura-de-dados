@@ -14,6 +14,16 @@ class Lista:
     else:
       print(f"Lista está cheia")
       
+  def inserirPosicaoLista(self, numero, posicao):
+    if(posicao >= 0 and posicao <= self.tamanho):
+      if(self.tamanho < self.max):
+        for i in range(self.tamanho, posicao, -1):
+            self.elemento[i] = self.elemento[i-1]
+        self.elemento[posicao] = numero                
+        self.tamanho += 1
+    else:
+      print(f"Posição inválida")
+      
   def buscaValorLista(self, numero):
     numeroEncontrado = False
     for i in range(self.tamanho):
@@ -23,7 +33,13 @@ class Lista:
         break
     if(numeroEncontrado == False):
       print(f"Esse numero não está na lista")
-
+      
+  # def removeItemPosicaoLista(self, numero):
+    
+      
+  def limparLista(self):
+    self.tamanho = 0
+    
   def imprimirLista(self):
     if(self.tamanho == 0):
       print(f"Lista esta vazia")
@@ -31,8 +47,7 @@ class Lista:
       for i in np.arange(self.tamanho):
         print(f"{self.elemento[i]}")  
   
-  def limparLista(self):
-    self.tamanho = 0
+  
 
 def main():
   numero = int(sys.argv[1])
@@ -41,7 +56,9 @@ def main():
   lista.inserir(15)
   lista.inserir(20)
   lista.inserir(25)
-  lista.buscaValorLista(150)
+  # lista.buscaValorLista(150)
+  lista.inserirPosicaoLista(24, 10)
+  # lista.inserirPosicaoLista(1, 4)
   lista.imprimirLista()
   # lista.limpar()
   # lista.imprimir()
